@@ -1,0 +1,10 @@
+from preprocessing import load_data, split_data, build_vectorizer, fit_transform
+df = load_data("../data/raw/imdb.csv")
+print("Dataset loaded:")
+print(df.head())
+X_train,X_test,y_train,y_test=split_data(df)
+print("\nTrain size:",len(X_train), "Test size:",len(X_test))
+vectorizer=build_vectorizer()
+X_train_vec,X_test_vec=fit_transform(vectorizer,X_train,X_test)
+print("\nVectorized shapes:")
+print("Train:",X_train_vec.shape,"Test:", X_test_vec.shape)
