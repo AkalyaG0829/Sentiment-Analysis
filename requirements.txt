@@ -5,3 +5,5 @@ flask
 jupyter
 joblib
 requests
+flask
+gunicorn
